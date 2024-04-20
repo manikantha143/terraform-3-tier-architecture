@@ -122,7 +122,6 @@ resource "aws_route_table" "web-rt" {
   }
 }
 resource "aws_nat_gateway" "example" {
-  allocation_id = aws_eip.example.id
   subnet_id     = aws_subnet.web-subnet-1.id
 
   tags = {
