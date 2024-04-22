@@ -121,15 +121,7 @@ resource "aws_route_table" "web-rt" {
     Name = "WebRT"
   }
 }
-resource "aws_nat_gateway" "example" {
-  subnet_id     = aws_subnet.web-subnet-1.id
 
-  tags = {
-    Name = "gw NAT"
-  }
-
-  
-}
 
 # Create Web Subnet association with Web route table
 resource "aws_route_table_association" "a" {
